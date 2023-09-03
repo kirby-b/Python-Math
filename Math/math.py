@@ -23,4 +23,6 @@ def main():
             BasicMath.math()
         if int(inp) == 3:
             AreaOfObject.measuring()
-main()
+            
+if __name__ == "__main__":
+    main()
