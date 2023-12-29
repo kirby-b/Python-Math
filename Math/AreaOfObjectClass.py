@@ -19,7 +19,7 @@ class AreaOfObject:
             else:
                 print("Invalid input please input a shape or its first letter")
                 
-    def Triangle():
+    def Triangle():#Calculates triangle area
         print("Input the base and height:")
         print("Base:")
         inp = str.strip(input())
@@ -29,7 +29,7 @@ class AreaOfObject:
         height = int(inp)
         area = base * height
         print(f"The area is {area}\n")
-    def Rectangle():
+    def Rectangle(): #Calculates square area
         print("Input the length and width:")
         print("Length:")
         inp = str.strip(input())
@@ -39,7 +39,7 @@ class AreaOfObject:
         width = int(inp)
         area = length * width
         print(f"The area is {area}\n")
-    def Circle():
+    def Circle():#Calculates circle area
         import math
         print("Input the radius:")
         print("Radius:")

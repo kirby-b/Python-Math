@@ -19,6 +19,6 @@ class Interest:
             time = int(input("Enter the time in years: "))
             if time <= 0:
                 print("Time passed can not be less than or equal to zero")
-
+        #Gets all values and calculates interest 
         total = initial * pow((1 + rate / 100), time)
         print(f"Balance after {time} year/s: ${total:.2f}\n")

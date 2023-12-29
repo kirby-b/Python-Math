@@ -3,13 +3,13 @@ class BasicMath:
     def math():
         print("""Please enter two numbers, note this program works like a calculator so make sure you
     enter your numbers in the correct order""")
-        print("Number 1:")
+        print("Number 1:")#Gets the first number
         inp = str.strip(input())
         num1 = float(inp)
-        print("Number 2:")
+        print("Number 2:")#Gets the second number
         inp = str.strip(input())
         num2 = float(inp)
-        op = BasicMath.getOperation()
+        op = BasicMath.getOperation()#Gets operation
         if op == "a" or op == "addition":
             result = num1 + num2
         if op == "s" or op == "subtraction":
@@ -21,7 +21,7 @@ class BasicMath:
         if op == "r" or op == "remainder":
             result = num1 % num2 
         print(f"{result:.2f}\n")
-
+    
     def getOperation():
         while True:
             print("""Now please input a type of operation.

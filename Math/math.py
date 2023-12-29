@@ -12,7 +12,7 @@ def main():
         1. Interest
         2. Basic math operations
         3. Area of 2d shapes""")
-
+        #Gets which math program to run and runs it
         inp = str.strip(input())
         while inp.isdigit() == False:
             print("Invalid input try again")
