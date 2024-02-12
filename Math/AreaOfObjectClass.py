@@ -1,3 +1,4 @@
+import math #Imports math
 class AreaOfObject:
     def measuring():
         shape = AreaOfObject.getShape()
@@ -7,15 +8,16 @@ class AreaOfObject:
             AreaOfObject.Rectangle()
         if shape == "circle" or shape == "c":
             AreaOfObject.Circle()
-    def getShape():
+    def getShape(): #Gets the type of calculated shape
         while True:
             print("""What Kind of shape would you like to measure:
                 1.Rectangle
                 2.Circle
                 3.Triangle""")
-            valid = input().lower().strip()
+            valid = input().lower().strip() #Formats it
+            #Validates input
             if valid in ["rectangle", "r", "circle", "c", "triangle", "t"]:
-                return valid
+                return valid 
             else:
                 print("Invalid input please input a shape or its first letter")
                 
@@ -40,7 +42,6 @@ class AreaOfObject:
         area = length * width
         print(f"The area is {area}\n")
     def Circle():#Calculates circle area
-        import math
         print("Input the radius:")
         print("Radius:")
         inp = str.strip(input())
