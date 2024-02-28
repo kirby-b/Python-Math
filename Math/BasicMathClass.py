@@ -22,7 +22,7 @@ class BasicMath:
             result = num1 % num2 
         print(f"{result:.2f}\n")
     
-    def getOperation():
+    def getOperation(): #Gets operation type
         while True:
             print("""Now please input a type of operation.
             Acceptable operations are:
@@ -32,6 +32,7 @@ class BasicMath:
             Subtraction
             Remainder(modulus)""")
             operation = input().lower().strip()
+            #Validates input
             if operation in ["multiplication", "m", "division", "d", "addition", "a", "subtraction", "s", "remainder", "r"]:
                 return operation
             else:
