@@ -1,7 +1,7 @@
 # Imports the classes from the other files.
-from BasicMathClass import do_math
-from InterestClass import get_interest
-from AreaOfObjectClass import measuring
+from BasicMath import do_math
+from Interest import get_interest
+from AreaOfObject import measuring
 
 
 def main():
