@@ -5,7 +5,8 @@ def do_math():
     pieces = equation_to_array(equation)
     oper_type = pieces[1]
     num1 = pieces[0]
-    num2 = pieces[2]
+    num2 = pieces[2] 
+    # Make it so you can have multiple numbers. Maybe go to next by adding 2 to num2 and oper_type
     if op == "+":
         result = num1 + num2
     if op == "-":
@@ -20,6 +21,7 @@ def do_math():
 
 
 def equation_to_array(equation: str):  # Gets operation type
+    # Find way to get multiple numbers and operands
     pieces = []
     while True:
         pieces = remove_whitespace(equation)
@@ -34,7 +36,7 @@ def equation_to_array(equation: str):  # Gets operation type
 
 def remove_whitespace(equation: str):
     x = 0
-    no_whitespace = equation.split(" ")
+    no_whitespace = equation.split(" ") # Splits the string into an array at spaces
     while x < len(no_whitespace):
         if no_whitespace[x] == "" or no_whitespace[x].isspace():
             no_whitespace.pop(x)  # Pops the index if it is empty or a space
