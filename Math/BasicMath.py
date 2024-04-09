@@ -26,12 +26,18 @@ def equation_to_array(equation: str):  # Gets operation type
     while True:
         pieces = remove_whitespace(equation)
         # Validates input
-        if equation[1] not in ["x", "*", "/", "-", "+", "%"]:
-            equation = input("Invalid operation in input.\nPlease enter two numbers and a operation (Ex: 2 + 2), it must have spaces in between:").lower()
-        elif equation[0].isnumeric() == False or equation[2].isnumeric() == False:
-            equation = input("Input does not contain numbers.\nPlease enter two numbers and a operation (Ex: 2 + 2), it must have spaces in between:").lower()
-        else:
-            break
+        x = 0
+        for x in pieces:
+            match x:
+                case x % 2 = 1:
+                    if equation[x] not in ["x", "*", "/", "-", "+", "%"]:
+                        equation = input("Invalid operation in input.\nPlease enter two numbers and a operation (Ex: 2 + 2), it must have spaces in between:").lower()
+                        break
+                case x % 2 = 0:
+                    if equation[x].isnumeric() == False:
+                        equation = input("Input does not contain numbers.\nPlease enter two numbers and a operation (Ex: 2 + 2), it must have spaces in between:").lower()
+                        break
+        break
     return pieces
 
 def remove_whitespace(equation: str):
