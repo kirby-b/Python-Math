@@ -1,7 +1,7 @@
 # Imports the classes from the other files.
-from BasicMathClass import do_math
-from InterestClass import get_interest
-from AreaOfObjectClass import measuring
+from BasicMath import do_math
+from Interest import get_interest
+from AreaOfObject import measuring
 
 
 def main():
@@ -12,7 +12,7 @@ def main():
             inp = str.strip(input("""Please input what kind of math you would like to do (use the numbers):
             1. Interest
             2. Basic math operations
-            3. Area of 2d shapes"""))
+            3. Area of 2d shapes\n"""))
             # Gets which math program to run and runs it
             while inp.isdigit() is False or inp not in ["1", "2", "3"]:
                 print("Invalid input try again")
