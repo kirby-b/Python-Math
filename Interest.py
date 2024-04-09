@@ -1,7 +1,4 @@
 def get_interest():
-    initial = 0
-    rate = 0
-    time = 0
     # Initializes values and asks for inputs
     initial = input("Enter the initial amount: ")
     rate = input("Enter the interest rate: ")
