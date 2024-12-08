@@ -1,17 +1,18 @@
 def get_interest():
-    # Initializes values and asks for inputs
+    # Prompts the user for input values
     initial = input("Enter the initial amount: ")
-    rate = input("Enter the interest rate: ")
+    rate = input("Enter the interest rate(number percent, EX: 5): ")
     time = input("Enter the time in years(round): ")
 
-    while time <= 0 or not time.isnumeric() or not is_float(initial) or not is_float(initial):  # Validation
-        if initial <= 0 or not is_float(initial):
+    # Checks to make sure inputs are valid and asked for new input if needed
+    while not time.isnumeric() or time <= 0 or not is_float(initial) or not is_float(rate):
+        if not is_float(initial) or initial <= 0:
             print("Initial amount can not be less than or equal to zero")
             initial = float(input("Enter the initial amount: "))
-        if rate <= 0 or not is_float(initial):
+        if not is_float(rate) or rate <= 0:
             print("Interest rate can not be less than or equal to zero")
             rate = float(input("Enter the interest rate: "))
-        if time <= 0 or not time.isnumeric():
+        if not time.isnumeric() or time <= 0:
             print("Time passed can not be less than or equal to zero")
             time = int(input("Enter the time in years(round): "))
     # Gets all values and calculates interest
